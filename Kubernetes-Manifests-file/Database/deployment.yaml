@@ -16,14 +16,11 @@ spec:
       containers:
       - name: mon
         image: mongo:4.4.6
-        command:
-            - "numactl"
-            - "--interleave=all"
-            - "mongod"
-            - "--wiredTigerCacheSizeGB"
-            - "0.1"
-            - "--bind_ip"
-            - "0.0.0.0"
+        # Simplified command without numactl
+        args:
+          - "--wiredTigerCacheSizeGB"
+          - "0.1"
+          - "--bind_ip_all"
         ports:
         - containerPort: 27017
         env: 

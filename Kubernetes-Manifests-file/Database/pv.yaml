@@ -2,12 +2,14 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: mongo-pv
-  namespace: three-tier
+  # PersistentVolumes are cluster-scoped - NO namespace!
 spec:
   capacity: 
     storage: 1Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
+  # For local development/testing only
+  persistentVolumeReclaimPolicy: Retain
   hostPath:
     path: /data/db
