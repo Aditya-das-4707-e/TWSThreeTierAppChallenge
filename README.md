@@ -173,11 +173,11 @@ http://three-tier.local
 ### 🔁 Port Forward (Debug Purpose Only)
 *Not used in final flow, only for testing*
 
-![Port Forward](./image/Port-forward.png)
+![Port Forward](Image/Port-forward.png)
 
 ### ✅ Application Running via Ingress
 
-![Application Running](./image/App-Running.png)
+![Application Running](Image/App-Running.png)
 
 ---
 
